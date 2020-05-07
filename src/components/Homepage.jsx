@@ -5,13 +5,89 @@ import carouselimg1 from '../assets/images/1.jpg';
 import carouselimg2 from '../assets/images/2.jpg';
 import carouselimg3 from '../assets/images/3.jpg';
 import template1 from '../assets/images/template1.jpg';
-import { Leftarrow } from '../assets/svg/icons';
+import {
+  Leftarrow,
+  Youtube,
+  Facebook,
+  Fbmsger,
+  LinkedIn,
+  Pinrest,
+  Reddit,
+  SnapChat,
+  Twitter,
+  Tiktok,
+  Instagram,
+} from '../assets/svg/icons';
 import Footer from '../components/Footer';
+import img from '../assets/images/propic.jpg';
 
 class Homepage extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      navMenu: false,
+    };
+  }
+
+  toggleNavmenu() {
+    const currentState = this.state.navMenu;
+    this.setState({ navMenu: !currentState });
+  }
+
   render() {
     return (
       <div className='wrapper'>
+        <div className='nav-menu'>
+          <span
+            className={`menu-icon ${this.state.navMenu ? 'open' : ''}`}
+            onClick={() => this.toggleNavmenu()}
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+          <div className='menu-container'>
+            <ul>
+              <li>
+                <a href='#'>
+                  <h2>Log In </h2>
+                  <p>Log in to an existing account</p>
+                </a>
+              </li>
+              <li>
+                <a href='#'>
+                  <h2>Sign Up </h2>
+                  <p>Log in to an existing account</p>
+                </a>
+              </li>
+              <li>
+                <a href='#'>
+                  <h2>Documentation</h2>
+                  <p>Get answer and instructions</p>
+                </a>
+              </li>
+              <li>
+                <a href='#'>
+                  <h2>Changelog</h2>
+                  <p>Learn what's new (and changed)</p>
+                </a>
+              </li>
+              <li>
+                <a href='#'>
+                  <h2>Go Pro!</h2>
+                  <p>Upgrade your experience</p>
+                </a>
+              </li>
+              <li>
+                <a href='#'>
+                  <h2>Contact</h2>
+                  <p>Sent your questions and comments</p>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
         <section>
           <div className='inner-section title-section'>
             <h1>
@@ -30,6 +106,178 @@ class Homepage extends Component {
                 <a href='' className='btn secondary-btn'>
                   Log In
                 </a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className='uses-section'>
+          <div className='content'>
+            <h2>Use it anywhere</h2>
+            <p>
+              Take your Linktree wherever your audience is, to help them to
+              discover all your important content.
+            </p>
+          </div>
+          <div className='social-media-wrp'>
+            <div className='social-media-section'>
+              <div className='card linkedIn'>
+                <i className='logo '> {LinkedIn} </i>
+                <div className='profile-details'>
+                  <div className='thumbnail'>
+                    <img src={img} alt='' />
+                  </div>
+                  <div className='profile-content'>
+                    <span className='bar'></span>
+                    <span className='bar'></span>
+                  </div>
+                </div>
+                <span className='tag'>silver.ee/yourname</span>
+                <div className='profile-dashboard'>
+                  <span></span>
+                </div>
+              </div>
+              <div className='card insta'>
+                <i className='logo'> {Instagram}</i>
+                <div className='profile-details'>
+                  <div className='thumbnail'>
+                    <img src={img} alt='' />
+                  </div>
+                  <div className='profile-content'>
+                    <span className='bar'></span>
+                    <span className='bar'></span>
+                  </div>
+                </div>
+                <span className='tag'>silver.ee/yourname</span>
+                <div className='profile-dashboard'>
+                  <span></span>
+                </div>
+              </div>
+              <div className='card youtube'>
+                <i className='logo'>{Youtube}</i>
+                <div className='profile-details'>
+                  <div className='thumbnail'>
+                    <img src={img} alt='' />
+                  </div>
+                  <div className='profile-content'>
+                    <span className='bar'></span>
+                    <span className='bar'></span>
+                  </div>
+                </div>
+                <span className='tag'>silver.ee/yourname</span>
+                <div className='profile-dashboard'>
+                  <span></span>
+                </div>
+              </div>
+              <div className='card facebook'>
+                <i className='logo'>{Facebook}</i>
+                <div className='profile-details'>
+                  <div className='thumbnail'>
+                    <img src={img} alt='' />
+                  </div>
+                  <div className='profile-content'>
+                    <span className='bar'></span>
+                    <span className='bar'></span>
+                  </div>
+                </div>
+                <span className='tag'>silver.ee/yourname</span>
+                <div className='profile-dashboard'>
+                  <span></span>
+                </div>
+              </div>
+
+              <div className='card fbmsger'>
+                <i className='logo'>{Fbmsger}</i>
+                <div className='profile-details'>
+                  <div className='thumbnail'>
+                    <img src={img} alt='' />
+                  </div>
+                  <div className='profile-content'>
+                    <span className='bar'></span>
+                    <span className='bar'></span>
+                  </div>
+                </div>
+                <span className='tag'>silver.ee/yourname</span>
+                <div className='profile-dashboard'>
+                  <span></span>
+                </div>
+              </div>
+              <div className='card tiktok'>
+                <i className='logo'>{Tiktok}</i>
+                <div className='profile-details'>
+                  <div className='thumbnail'>
+                    <img src={img} alt='' />
+                  </div>
+                  <div className='profile-content'>
+                    <span className='bar'></span>
+                    <span className='bar'></span>
+                  </div>
+                </div>
+                <span className='tag'>silver.ee/yourname</span>
+                <div className='profile-dashboard'>
+                  <span></span>
+                </div>
+              </div>
+              <div className='card pinrest'>
+                <i className='logo'>{Pinrest}</i>
+                <div className='profile-details'>
+                  <div className='thumbnail'>
+                    <img src={img} alt='' />
+                  </div>
+                  <div className='profile-content'>
+                    <span className='bar'></span>
+                    <span className='bar'></span>
+                  </div>
+                </div>
+                <span className='tag'>silver.ee/yourname</span>
+                <div className='profile-dashboard'>
+                  <span></span>
+                </div>
+              </div>
+              <div className='card snapChat'>
+                <i className='logo'>{SnapChat}</i>
+                <div className='profile-details'>
+                  <div className='thumbnail'>
+                    <img src={img} alt='' />
+                  </div>
+                  <div className='profile-content'>
+                    <span className='bar'></span>
+                  </div>
+                </div>
+                <span className='tag'>silver.ee/yourname</span>
+                <div className='profile-dashboard'>
+                  <span></span>
+                </div>
+              </div>
+              <div className='card twitter'>
+                <i className='logo'>{Twitter}</i>
+                <div className='profile-details'>
+                  <div className='thumbnail'>
+                    <img src={img} alt='' />
+                  </div>
+                  <div className='profile-content'>
+                    <span className='bar'></span>
+                  </div>
+                </div>
+                <span className='tag'>silver.ee/yourname</span>
+                <div className='profile-dashboard'>
+                  <span></span>
+                </div>
+              </div>
+              <div className='card reddit'>
+                <i className='logo'>{Reddit}</i>
+                <div className='profile-details'>
+                  <div className='thumbnail'>
+                    <img src={img} alt='' />
+                  </div>
+                  <div className='profile-content'>
+                    <span className='bar'></span>
+                    <span className='bar'></span>
+                  </div>
+                </div>
+                <span className='tag'>silver.ee/yourname</span>
+                <div className='profile-dashboard'>
+                  <span></span>
+                </div>
               </div>
             </div>
           </div>
