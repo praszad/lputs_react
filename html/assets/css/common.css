@@ -1,0 +1,323 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+  font-family: 'senbold';
+}
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+}
+.icon svg {
+  width: 100%;
+  height: 100%;
+}
+.backgroung-layer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  background: linear-gradient(45deg, #13547a, #80d0c7);
+}
+
+.backgroung-layer .squares {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.backgroung-layer .squares span {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+}
+
+.backgroung-layer .squares span:nth-child(1) {
+  left: -80px;
+  transform: rotate(30deg);
+
+  animation: bg-part-down 1s ease-in-out infinite;
+}
+.backgroung-layer .squares span:nth-child(2) {
+  top: -90px;
+  right: -114px;
+  animation: bg-part-down 2s ease-in-out infinite 1s;
+  transform: rotate(45deg);
+}
+.backgroung-layer .squares span:nth-child(3) {
+  bottom: -170px;
+  left: 289px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  animation: bg-part-top 3s ease-in-out infinite 0.4s;
+}
+.backgroung-layer .squares span:nth-child(4) {
+  width: 8px;
+  height: 8px;
+  bottom: 26px;
+  left: 0;
+  animation: bg-part-down 4s ease-in-out infinite;
+}
+
+/*Running carousel*/
+.carousel-content {
+  display: flex;
+  animation: horzitol-scroll 40s linear infinite;
+}
+.carousel-content a {
+  width: 100%;
+  flex-shrink: 0;
+  height: 500px;
+}
+.carousel-content a img {
+  width: 100%;
+}
+
+/* button */
+.btn {
+  display: inline-block;
+  border-radius: 6px;
+  text-align: center;
+  padding: 1rem;
+  color: #1a1a1a;
+  font-family: 'senbold';
+  white-space: nowrap;
+  transition: 0.3s;
+  border: 0;
+}
+.btn.primary-btn {
+  background: #f9bc26;
+  color: #fff;
+}
+.btn.secondary-btn {
+  background-color: #f6f6f6;
+  color: #000;
+  border: 1px solid transparent;
+}
+.btn.secondary-btn:hover {
+  border-color: #fff;
+}
+.secondary-varient-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  border: 1px solid #efefef;
+  border-radius: 0;
+  border-left: 4px solid #f9bc26;
+  padding: 1.25rem;
+  box-shadow: 1px 2px 18px 0 rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+}
+.secondary-varient-btn .icon {
+  width: 20px;
+  height: 20px;
+}
+.secondary-varient-btn .icon path {
+  fill: #545759;
+}
+
+/* Header nav */
+.nav-menu .menu-icon {
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  height: 25px;
+  opacity: 0.5;
+  width: 25px;
+  z-index: 99;
+  cursor: pointer;
+}
+.nav-menu .menu-icon:hover {
+  opacity: 1;
+}
+.nav-menu .menu-icon span {
+  background: #fff;
+  border-radius: 2px;
+  display: inline-block;
+  height: 3px;
+  position: absolute;
+  width: 100%;
+}
+.nav-menu .menu-icon span:nth-child(1) {
+  top: 2px;
+  transition: top 200ms 250ms, transform 200ms;
+}
+.nav-menu .menu-icon span:nth-child(2) {
+  top: 10px;
+  transition: opacity 0ms 300ms;
+}
+.nav-menu .menu-icon span:nth-child(3) {
+  top: 18px;
+  transition: top 100ms 300ms, transform 200ms;
+}
+.nav-menu .menu-icon.open {
+  transform: scale3d(0.9, 0.9, 0.9);
+}
+.nav-menu .menu-icon.open span {
+  top: 10px;
+}
+.nav-menu .menu-icon.open span:nth-child(1) {
+  transform: rotate3d(0, 0, 1, 45deg);
+  transition: top 100ms, transform 200ms 250ms;
+}
+.nav-menu .menu-icon.open span:nth-child(2) {
+  opacity: 0;
+  transition: opacity 200ms;
+}
+.nav-menu .menu-icon.open span:nth-child(3) {
+  transform: rotate3d(0, 0, 1, -45deg);
+  transition: top 200ms, transform 200ms 250ms;
+}
+.nav-menu .menu-icon.open + .menu-container {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+.nav-menu .menu-container {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(45deg, #13547a, #80d0c7);
+  z-index: 9;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.95);
+  transition: 0.3s;
+}
+.nav-menu .menu-container ul {
+  display: flex;
+  margin: auto;
+  flex-wrap: wrap;
+  max-width: 1074px;
+  border: solid 1px rgba(255, 255, 255, 0.075);
+  border-radius: 8px;
+}
+.nav-menu .menu-container ul li {
+  width: 33.3%;
+  border: solid 1px rgba(255, 255, 255, 0.075);
+}
+.nav-menu .menu-container ul li a {
+  display: block;
+  padding: 50px 15px;
+  text-align: center;
+}
+.nav-menu .menu-container ul li a h2 {
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 15px;
+}
+.nav-menu .menu-container ul li a p {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.75);
+}
+.nav-menu .menu-container ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.025);
+}
+/* Link*/
+.link {
+  color: rbg(255, 255, 255);
+  border-bottom: 1px dotted;
+  transition: 0.3s;
+  opacity: 0.75;
+}
+.link:hover {
+  opacity: 1;
+  border-style: none;
+}
+
+/* Footer */
+/*footer*/
+footer {
+  box-shadow: inset 2px 2px 5px 1px rgba(0, 0, 0, 0.08);
+  background-color: #f2f2f2;
+  padding: 1.5rem 0 1rem 0;
+}
+footer .nav-footer {
+  text-align: center;
+}
+footer .nav-footer li {
+  display: inline-block;
+  margin: 0 0.9375rem;
+}
+footer .nav-footer li a {
+  color: #545759;
+  font-size: 1rem;
+  padding: 0.625rem 0 0.625rem 0;
+  border: 2px solid transparent;
+  transition: 0.3s;
+}
+footer .nav-footer li a:hover {
+  border-bottom: 2px solid #1fd0ff;
+}
+footer .footer-strapline {
+  display: block;
+  width: 30%;
+  margin: 0 auto;
+  border-top: 1px solid #545759;
+  font-size: 1.875rem;
+  opacity: 0.1;
+  display: block;
+  text-align: center;
+  margin: 1.5625rem auto;
+  padding: 1.875rem;
+  color: #000;
+}
+footer .copyrights-panel {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5625rem;
+}
+footer .copyrights-panel .copyright {
+  font-size: 0.875rem;
+  color: #b7c0c6;
+}
+footer .copyrights-panel .social .nav-social {
+  font-size: 0.875rem;
+  color: #b7c0c6;
+}
+footer .copyrights-panel .social .nav-social li {
+  display: inline-block;
+  margin: 0 1rem;
+}
+footer .copyrights-panel .social .nav-social li .social-link {
+  color: #545759;
+  transition: 0.3s;
+}
+footer .copyrights-panel .social .nav-social li .social-link:hover {
+  color: #b7c0c6;
+}
+/* Animations */
+
+@keyframes horzitol-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-300%);
+  }
+}
+@keyframes shrink-bounce {
+  0% {
+    transform: scale(1);
+  }
+  33% {
+    transform: scale(0.85);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

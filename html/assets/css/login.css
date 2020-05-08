@@ -1,0 +1,82 @@
+.login-wrapper {
+  background: #fff;
+  display: block;
+  border-radius: 12px;
+  max-width: 420px;
+  padding: 30px;
+  margin: 10% auto;
+  box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.3);
+}
+.login-wrapper h1 {
+  font-size: 32px;
+  padding: 20px 0 40px;
+  text-align: center;
+  color: #453e65;
+}
+.input-field {
+  display: flex;
+  margin-bottom: 30px;
+}
+.input-field.pwd-field {
+  margin-bottom: 10px;
+}
+.input-control {
+  position: relative;
+  flex: 1;
+}
+.input-control input {
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 5px;
+}
+.input-control input:focus + label,
+.input-control input.valid + label {
+  top: 0%;
+  font-size: 13px;
+  font-family: 'senbold';
+}
+.input-control label {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: 0.3s;
+  font-size: 16px;
+  color: #453e65;
+}
+.input-field .icon {
+  width: 23px;
+  margin-right: 15px;
+}
+
+.input-field .icon svg {
+  fill: #89d0ca;
+}
+
+.forgot-link {
+  text-align: right;
+}
+.forgot-link a {
+  color: #89d0ca;
+  font-size: 14px;
+}
+.login-form .btn-field {
+  text-align: center;
+  margin: 30px;
+}
+.login-form .btn {
+  min-width: 180px;
+}
+.signup {
+  text-align: center;
+  font-size: 14px;
+  color: #54575e;
+  margin-top: 50px;
+}
+
+.signup a {
+  color: #453e65;
+
+  font-family: 'senbold';
+}
