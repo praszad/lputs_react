@@ -24,12 +24,10 @@ class Homepage extends Component {
                 anything.
               </p>
               <div className='title-button'>
-                <a href='' className='btn primary-btn'>
-                  Choose a Starting Point
-                </a>
-                <a href='' className='btn secondary-btn'>
+                <p className='btn primary-btn'>Choose a Starting Point</p>
+                <p href='' className='btn secondary-btn'>
                   Log In
-                </a>
+                </p>
               </div>
             </div>
           </div>
