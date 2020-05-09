@@ -22,7 +22,7 @@ strong {
   top: 0;
   bottom: 0;
   z-index: -1;
-  background: linear-gradient(45deg, #13547a, #80d0c7);
+  background: linear-gradient(45deg, #ff9800, #ffeb3b);
 }
 
 .backgroung-layer .squares {
@@ -37,7 +37,7 @@ strong {
   position: absolute;
   width: 200px;
   height: 200px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.2);
   border-radius: 8px;
 }
 
@@ -87,7 +87,7 @@ strong {
   display: inline-block;
   border-radius: 6px;
   text-align: center;
-  padding: 1rem;
+  padding: 15px;
   color: #1a1a1a;
   font-family: 'senbold';
   white-space: nowrap;
@@ -99,13 +99,11 @@ strong {
   color: #fff;
 }
 .btn.secondary-btn {
-  background-color: #f6f6f6;
-  color: #000;
+  background-color: #8c19ff;
+  color: #fff;
   border: 1px solid transparent;
 }
-.btn.secondary-btn:hover {
-  border-color: #fff;
-}
+
 .secondary-varient-btn {
   position: relative;
   display: flex;
